@@ -28,7 +28,7 @@ version of your code:
     of the remote repository you are using.  By default this will be
     `origin`.  Once this has run, you will have created a `submission`
     tag on the remote server, and a file `repo.txt` locally that you
-    should submit. `submit-repo.sh` can be found [here](https://github.com/cornell-cs5220-f17/cs5220-f17/tree/master/util). 
+    should submit. `submit-repo.sh` can be found [here](https://github.com/cs5220-f24/web/tree/master/util). 
     
 3.  The `submit-repo.sh` script will also print an SSH public key when
     it finishes running; add the generated public key as a "deployment
@@ -51,8 +51,7 @@ version of your code:
 If you would like the professor or the TA to be able to comment on
 your code independent of the submission process, you can always add us
 to your repository as regular collaborators with read-only access.  We
-are `dsb253` and `ehl59` on the Cornell GitHub, and `dbindel` and
-`ericlee0803` on GitHub and Bitbucket (and GitLab in the case of the
-professor).
+are `dsb253`, `js3623`, and `erv29` on the Cornell GitHub, and
+`dbindel`, `jiatiansun`, and `devovevo` on GitHub.
 
-[CMS]: http://cms.csuglab.cornell.edu/web/guest/
+[CMS]: https://cmsx.cs.cornell.edu/web/guest/
