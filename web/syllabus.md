@@ -162,4 +162,4 @@ revised semester calendar or other circumstances.  Any such announcements will
 be posted to [Ed Discussion] and [the course home page](index.html).
 
 [Ed]: https://edstem.org/us/courses/63894/discussion/
-[cms]: https://www.cs.cornell.edu/courses/cs5220/2024fa
+[cms]: https://cmsx.cs.cornell.edu/
