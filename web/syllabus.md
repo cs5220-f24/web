@@ -5,24 +5,21 @@ layout:     main
 
 ## Logistical information
 
-CS 5220, Fall 2024: Applications of Parallel Computers  
-Lecture time: TR 1:25-2:40  
-Lecture location: Gates G01
+CS 5220, {{ site.data.logistics.semester }}: Applications of Parallel Computers  
+Lecture time: {{ site.data.logistics.time }}  
+Lecture location: {{ site.data.logistics.location }}
 
-Prof: [David Bindel](http://www.cs.cornell.edu/~bindel)  
-612 Rhodes Hall  
-Phone: 607-255-5395  
-E-mail: <bindel@cs.cornell.edu>  
-OH: W 1:30-2:30, Th 10-11, or [by appointment](https://outlook.office.com/bookwithme/user/33d37e9c60e44e8ebbb4bb387be0c4fe@cornell.edu?anonymous&ep=plink)
+Prof: [{{ site.data.logistics.prof.name }}]({{ site.data.logistics.prof.url }})  
+E-mail: <{{ site.data.logistics.prof.email }}>  
+OH: {{ site.data.logistics.prof.oh }}  
+{% if site.data.logistics.prof.scheduler %}[Scheduler link]({{ site.data.logistics.prof.scheduler }}){% endif %}
 
-TA: [Jiatian (Caroline) Sun](https://jiatiansun.github.io/)  
-Email: <js3623@cornell.edu>  
-OH: TBA
+{% for ta in site.data.logistics.prof.staff %}
+TA: {% if ta.url %}[{{ ta.name }}]({{ ta.url }}){% else %}{{ ta.name }}{% endif %}  
+Email: <{{ ta.email }}>
+OH: {{ ta.oh }}
 
-TA: Evan Vera  
-Email: <erv29@cornell.edu>  
-OH: TBA
-
+{% endfor %}
 ## Course description
 
 CS 5220 is an introduction to performance tuning and parallelization,
@@ -151,8 +148,7 @@ but that is no reason for dishonesty!  If you feel you can't complete
 the work on the own, come talk to the professor, the TA, or your advisor,
 and we can help you figure out what to do.
 
-For more information, see Cornell's
-[Code of Academic Integrity](http://cuinfo.cornell.edu/Academic/AIC.html).
+For more information, see Cornell's [Code of Academic Integrity][coai].
 
 ### Emergency procedures
 
@@ -161,5 +157,6 @@ grading percentages are subject to changes that may be necessitated by a
 revised semester calendar or other circumstances.  Any such announcements will
 be posted to [Ed Discussion] and [the course home page](index.html).
 
-[Ed]: https://edstem.org/us/courses/63894/discussion/
+[Ed]: {{ site.data.logistics.discussion }}
 [cms]: https://cmsx.cs.cornell.edu/
+[coai]: https://deanoffaculty.cornell.edu/faculty-and-academic-affairs/academic-integrity/code-of-academic-integrity/

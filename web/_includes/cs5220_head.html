@@ -10,29 +10,26 @@
       <hr/>
     <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6">
       <p>
-        Location: Gates G01<br/>
-        Lecture: TR 1:20-2:40<br/>
-        Discussion: <a href="https://edstem.org/us/courses/63894/discussion/">Ed Discussion</a><br/>
-        Course material: <a href="https://www.github.com/cs5220-f24/">GitHub</a>
+        Location: {{ site.data.logistics.location }}<br/>
+        Lecture: {{ site.data.logistics.time }}<br/>
+        Discussion: <a href="{{ site.data.logistics.discussion }}">Ed Discussion</a><br/>
+        Course material: <a href="{{ site.data.logistics.github }}">GitHub</a>
       </p>
     </div>
     <div class="col-xs-7 col-sm-6 col-md-6 col-lg-6">    
       <p>
-        Prof: <a href="http://www.cs.cornell.edu/~bindel">David Bindel</a><br/>
-        Email: <a href="mailto:bindel@cs.cornell.edu">bindel@cs.cornell.edu</a><br/>
-        OH: M 3:30-4:30, W 4-5 in Rhodes 612<br/>
-        <a href="https://outlook.office.com/bookwithme/user/33d37e9c60e44e8ebbb4bb387be0c4fe@cornell.edu?anonymous&ep=plink">Scheduler link</a>
+        Prof: <a href="{{ site.data.logistics.prof.url }}">{{ site.data.logistics.prof.name }}</a><br/>
+        Email: <a href="mailto:{{ site.data.logistics.prof.email }}">{{ site.data.logistics.prof.email }}</a><br/>
+        OH: {{ site.data.logistics.prof.oh }}<br/>
+        <a href="{{ site.data.logistics.prof.scheduler }}">Scheduler link</a>
       </p>
+      {% for ta in site.data.logistics.staff %}
       <p>
-        TA: <a href="https://jiatiansun.github.io/">Jiatian (Caroline) Sun</a></br>
-        Email: <a href="mailto:js3623@cornell.edu">js3623@cornell.edu</a><br/>
-        OH: TBA<br/>
+        TA: {% if ta.url %}<a href="{{ ta.url }}">ta.name</a>{% else %}ta.name{% endif %}<br/>
+        Email: <a href="mailto:{{ ta.email }}">{{ ta.email }}</a><br/>
+        OH: {{ ta.oh }}
       </p>
-      <p>
-        TA: Evan Vera<br/>
-        Email: <a href="mailto:erv29@cornell.edu">erv29@cornell.edu</a><br/>
-        OH: TBA<br/>
-      </p>
+      {% endfor %}
     </div>
     </div>
   </div>
