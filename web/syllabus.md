@@ -9,15 +9,34 @@ CS 5220, {{ site.data.logistics.semester }}: Applications of Parallel Computers
 Lecture time: {{ site.data.logistics.time }}  
 Lecture location: {{ site.data.logistics.location }}
 
-Prof: [{{ site.data.logistics.prof.name }}]({{ site.data.logistics.prof.url }})  
-E-mail: <{{ site.data.logistics.prof.email }}>  
-OH: {{ site.data.logistics.prof.oh }}  
-{% if site.data.logistics.prof.scheduler %}[Scheduler link]({{ site.data.logistics.prof.scheduler }}){% endif %}
+{% assign prof = site.data.logistics.prof -%}
+Prof: [{{ prof.name }}]({{ prof.url }})  
+E-mail: <{{ prof.email }}>  
+{% if prof.office %}Office: {{ prof.office }}  {% endif %}
+Office hours: 
+{% for oh in prof.oh -%}
+  {%- if oh.url -%}
+    [{{ oh.when }}]({{ oh.url }})
+  {%- else -%}
+    {{ oh.when }}
+  {%- endif -%}
+  {%- if oh.where -%}, {{ oh.where }}{%- endif -%}
+  {%- unless forloop.last %}; {%endunless %}
+{% endfor %}
 
-{% for ta in site.data.logistics.prof.staff %}
+{% for ta in site.data.logistics.staff %}
 TA: {% if ta.url %}[{{ ta.name }}]({{ ta.url }}){% else %}{{ ta.name }}{% endif %}  
-Email: <{{ ta.email }}>
-OH: {{ ta.oh }}
+Email: <{{ ta.email }}>  
+Office hours: 
+{% for oh in ta.oh -%}
+  {%- if oh.url -%}
+    [{{ oh.when }}]({{ oh.url }})
+  {%- else -%}
+    {{ oh.when }}
+  {%- endif -%}
+  {%- if oh.where -%}, {{ oh.where }}{%- endif -%}
+  {%- unless forloop.last %}; {%endunless %}
+{% endfor %}
 
 {% endfor %}
 ## Course description
@@ -155,7 +174,7 @@ For more information, see Cornell's [Code of Academic Integrity][coai].
 In the event of a major campus emergency, course requirements, deadlines, and
 grading percentages are subject to changes that may be necessitated by a
 revised semester calendar or other circumstances.  Any such announcements will
-be posted to [Ed Discussion] and [the course home page](index.html).
+be posted to [Ed Discussion][Ed] and [the course home page](index.html).
 
 [Ed]: {{ site.data.logistics.discussion }}
 [cms]: https://cmsx.cs.cornell.edu/
