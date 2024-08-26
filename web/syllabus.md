@@ -115,7 +115,7 @@ Your participation makes the class more interesting and useful
 for all of us.  There are several ways to participate:
 
 - Answering questions in class
-- Actively engaging and answering questions on [Piazza]
+- Actively engaging and answering questions on [Ed Discussion][Ed]
 - Helping correct and clarify class notes and assignments
 
 It is also critical for us to have your feedback about how the class
