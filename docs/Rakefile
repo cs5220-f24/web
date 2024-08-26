@@ -1,0 +1,21 @@
+desc "Manage web site publication"
+
+# Settings
+dest = "cslinux:/courses/cs5220/2024fa"  # Destination
+
+task :serve => [:build] do
+  sh "jekyll serve"
+end
+
+task :clean do
+  sh "rm -rf _site"
+end
+
+task :build do
+  sh "quarto render"
+  sh "rm -f _site/index.html _site/sitemap.xml _site/robots.txt"
+end
+
+task :deploy => [:build] do
+  sh "rsync -avzL _site/ #{dest} || true"
+end
