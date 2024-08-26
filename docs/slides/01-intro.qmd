@@ -254,9 +254,10 @@ See also David Bailey's comments:
 
 ## Example: Reduction
 
-How can we speed up summing an array using many processors?
+How can we speed up summing an array of length $n$ with $p \leq n$ processors?
 
-
+- Theory:  $n/p + O(\log(p))$ time with *reduction tree*
+- Is this realistic?
 
 ## Quantifying Parallel Performance
 
@@ -339,7 +340,7 @@ Poor speed-up occurs because:
 -   The communication cost is relatively large
 -   The serial computation cost is relatively large
 
-Some of the usual suspects for parallel performance problems!\
+Some of the usual suspects for parallel performance problems!
 
 ## Weak scaling?
 

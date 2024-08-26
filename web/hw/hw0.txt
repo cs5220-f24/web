@@ -1,0 +1,19 @@
+Please complete the following and submit via CMS:
+
+1. About you:
+
+- How do you like to be called (including pronouns)?
+- What do you hope to get out of the course?
+- Are there any concerns that you have at this point?
+
+2. About a peer (someone you've introduced yourself to in class):
+
+- What is the person's name and academic area?
+- What is something interesting they shared?
+
+3. About an application:
+
+Find an application area of parallel computing that you find
+interesting and say a little about it.  What are the challenges?  What
+is the current state of the art in terms of high-performance codes
+that address the problem?  Provide references (URLs are fine).
