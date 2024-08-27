@@ -10,13 +10,19 @@ format:
 
 # Logistics
 
-## CS 5220
+## CS 5220 {.nostretch}
 
 Title: *Applied High-Performance and Parallel Computing*  
 Web: <https://www.cs.cornell.edu/courses/cs5220/2024fa>  
 When: TR 1:25-2:40  
 where: Gates G01  
 Who: David Bindel, Caroline Sun, Evan Vera
+
+::: {.r-stack}
+![](https://www.cs.cornell.edu/~bindel/pic/Bush-06.jpg){height=300px}
+![](../img/sun.jpeg){height=300px}
+![](../img/vera.jpeg){height=300px}
+:::
 
 ## Enrollment
 
