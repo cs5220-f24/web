@@ -332,7 +332,39 @@ How much could I possibly speed up?
 
 ## Modeling Speedup
 
-(Parameters: $n = 80$, $t_c = 0.3$, $t_t = 1$.)
+Student count:
+```{ojs}
+//| echo: false
+viewof nstudents = Inputs.range(
+  [10, 200], 
+  {value: 100, step: 1}
+);
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+function tserial(n, r)   { return n * 0.3; }
+function tparallel(n, r) { return n * 0.3 / r + r * 1.0; }
+function speedup(n, r)   { return tserial(n,r) / tparallel(n,r); }
+
+rows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 
+        12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+data = ({ 
+    "rows" : rows,
+    "speedup" : rows.map((r) => speedup(nstudents,r))
+})
+```
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.lineY(transpose(data), {x: "rows", y: "speedup"})
+  ]
+})
+```
+(Parameters: $t_c = 0.3$, $t_t = 1$.)
 
 ## Modeling Speedup
 
