@@ -6,6 +6,9 @@ date: 2024-08-27
 format:
   revealjs:
     theme: default
+  beamer:
+    theme: metropolis
+    slide-level: 2
 ---
 
 # Logistics
@@ -18,7 +21,7 @@ When: TR 1:25-2:40
 where: Gates G01  
 Who: David Bindel, Caroline Sun, Evan Vera
 
-::: {.r-stack}
+::: {.r-stack .content-visible when-format="html"}
 ![](https://www.cs.cornell.edu/~bindel/pic/Bush-06.jpg){height=300px}
 ![](../img/sun.jpeg){height=300px}
 ![](../img/vera.jpeg){height=300px}
@@ -149,9 +152,12 @@ Jot down answers (part of HW0).
 
 ## The CS&E Picture
 
-<div style="text-align:center;">
-<img src="../img/cse.svg" style="width: 55%;" />
-</div>
+::: {.content-visible when-format="html"}
+![](../img/cse.svg){height=600px fig-align="center"}
+:::
+::: {.content-visible when-format="pdf"}
+![](../img/cse.svg){height=300px fig-align="center"}
+:::
 
 ## Applications Everywhere!
 
@@ -332,6 +338,8 @@ How much could I possibly speed up?
 
 ## Modeling Speedup
 
+::: {.content-visible when-format="html"}
+
 Student count:
 ```{ojs}
 //| echo: false
@@ -365,6 +373,18 @@ Plot.plot({
 })
 ```
 (Parameters: $t_c = 0.3$, $t_t = 1$.)
+:::
+::: {.content-visible when-format="pdf"}
+```{julia}
+#| echo: false
+using Plots
+
+rs = 1:20
+speedup(r, n) = (n * 0.3) / (n * 0.3 / r + r * 1.0)
+plot(rs, speedup.(rs, 111), legend=false)
+```
+(Parameters: $t_c = 0.3$, $t_t = 1$, $n = 111$.)
+:::
 
 ## Modeling Speedup
 
