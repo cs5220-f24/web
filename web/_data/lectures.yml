@@ -4,11 +4,11 @@
 -
   date: 2024-08-27
   info: Introduction
-  slides: 01-intro.html
+  slides: 01-intro
 -
   date: 2024-08-29
   info: Performance basics
-  slides: 02-perf-basics.html
+  slides: 02-perf-basics
   notes: 01-perf-basics.html
 #
 # ==================
