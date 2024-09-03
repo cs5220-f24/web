@@ -368,7 +368,7 @@ do {
 :::
 
 ::: {.content-visible when-format="html"}
-![](../img/membench-m1pro-line.png){width=100%}
+![](../img/membench-m1pro-line.svg){width=100%}
 :::
 
 ## Membench on My Laptop
@@ -378,13 +378,13 @@ do {
 :::
 
 ::: {.content-visible when-format="html"}
-![](../img/membench-m1pro-heat.png){width=100%}
+![](../img/membench-m1pro-heat.svg){width=100%}
 :::
 
 ## Features
 
-- Vertical: 128 B cache lines ($2^6$), 16 KB pages ($2^14$)
-- Horizontal: 128 KB L1 ($2^17$), 12 MB L2 ($< 2^24$)
+- Vertical: 128 B cache lines ($2^6$), 16 KB pages ($2^{14}$)
+- Horizontal: 128 KB L1 ($2^{17}$), 12 MB L2 ($< 2^{24}$)
 - Diagonal: 8-way set assoc, 256 page L1 TLB, 3072 page L2 TLB
 
 ## The Moral
