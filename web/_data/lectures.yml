@@ -17,11 +17,12 @@
 -
   date: 2024-09-03
   info: Single processor architecture
-  hw: HW0 due
+  slides: 03-single-core
 -
   date: 2024-09-05
   info: Basic optimizations
   hw: P1 out
+  hw: HW0 due
 #
 # ==================
 # Week 3
@@ -29,10 +30,11 @@
 -
   date: 2024-09-10
   info: Basic optimizations
-  hw: HW1 due
+  hw: Survey due
 -
   date: 2017-09-12
   info: Parallel machines and models
+  hw: HW1 due
 #
 # ==================
 # Week 4
