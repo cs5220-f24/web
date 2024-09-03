@@ -13,6 +13,12 @@ format:
 
 # Logistics
 
+## Office hours
+
+- Bindel missing OH this week (new grad student social)
+- Caroline and Evan will still have office hours
+- Appointment and Ed are also options!
+
 ## Enrollment
 
 - Use [ticket system][tix] for enrollment issues
@@ -331,7 +337,56 @@ centroid.  Which of these is faster and why?
    $x_i$, then sum the $y_i$ in a separate loop.
 3. Store the $x_i$ in one array, the $y_i$ in a second array.  Sum the
    $x_i$, then sum the $y_i$.
-   
+
+## Caches on My Laptop
+
+[Apple M1 Pro](https://en.wikipedia.org/wiki/Apple_M1) (Firestorm core?)
+
+- 128 KB L1 data cache
+- 12 MB L2 cache (shared)
+- 24 MB system level cache
+
+## A memory benchmark ([Membench](https://github.com/cs5220-f24/membench))
+
+```{.c}
+/* Time the loop with strided access + loop overhead */
+int steps = 0;
+double start = omp_get_wtime();
+do {
+    for (int i = SAMPLE*stride; i != 0; i--)
+        for (int index = 0; index < limit; index += stride)
+            x[index]++;
+    steps++;
+    sec0 = omp_get_wtime()-start;
+} while (sec0 < RTIME);
+```
+
+## Membench on My Laptop
+
+::: {.content-visible when-format="pdf"}
+![](../img/membench-m1pro-line.pdf){width=100%}
+:::
+
+::: {.content-visible when-format="html"}
+![](../img/membench-m1pro-line.png){width=100%}
+:::
+
+## Membench on My Laptop
+
+::: {.content-visible when-format="pdf"}
+![](../img/membench-m1pro-heat.pdf){width=100%}
+:::
+
+::: {.content-visible when-format="html"}
+![](../img/membench-m1pro-heat.png){width=100%}
+:::
+
+## Features
+
+- Vertical: 128 B cache lines ($2^6$), 16 KB pages ($2^14$)
+- Horizontal: 128 KB L1 ($2^17$), 12 MB L2 ($< 2^24$)
+- Diagonal: 8-way set assoc, 256 page L1 TLB, 3072 page L2 TLB
+
 ## The Moral
 
 Even for simple programs, performance is a complicated function of

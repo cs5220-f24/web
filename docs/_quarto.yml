@@ -4,6 +4,9 @@ project:
     - "slides/*.qmd"
     - "notes/*.qmd"
 
+execute:
+  freeze: auto
+
 website:
   title: "CS 5220 Slides and Notes"
   site-url: https://www.cs.cornell.edu/courses/cs5220/2024fa
