@@ -64,7 +64,7 @@ You can also develop remotely.
 You will want to know:
 
 - Covered tools: [Compilers][nersc-cc], [profilers][nersc-prof], 
-  [modules][nersc-mod]
+  [modules][nersc-lmod]
 - Demonstrated: [git][git-scm], [make][nersc-make]
 - "You'll pick up": Unix shell, editors
 
