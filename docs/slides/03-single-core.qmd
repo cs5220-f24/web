@@ -22,6 +22,14 @@ format:
 
 [tix]: https://tdx.cornell.edu/TDClient/193/Portal/Home/
 
+## CIS Partner Finding Social
+
+> Searching for a study buddy or partner? Looking to meet a new friend?
+> Are you taking CS, INFO, or ORIE classes? If so, the CIS Partner
+> Finding Social is for you! This is the PERFECT opportunity to find a
+> partner and meet other students in your classes, so join us on
+> September 11th at 5-7pm in Duffield Atrium!
+
 ## Computing Systems
 
 You will be using three systems (if enrolled!) -- see email.
@@ -36,7 +44,7 @@ Perlmutter and GCP are Unix environments.  Recommended for local work:
 
 You can also develop remotely.
 
-## Computing systems
+## Computing Systems
 
 - Perlmutter
   - Fill out the CMS survey for your login ID
