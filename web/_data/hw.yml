@@ -2,3 +2,7 @@
   desc: "HW0: Who are you?"
   file: hw0.txt
   due: 2024-09-03
+-
+  desc: "Matrix multiply"
+  file: proj1.html
+  due: 2024-09-24
