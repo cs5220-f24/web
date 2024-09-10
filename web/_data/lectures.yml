@@ -35,7 +35,6 @@
 -
   date: 2024-09-12
   info: Parallel machines and models
-  hw: HW1 due
 #
 # ==================
 # Week 4
@@ -43,10 +42,10 @@
 -
   date: 2024-09-17
   info: Parallelism and locality in simulations
+  hw: HW1 due
 -
   date: 2024-09-19
   info: Parallelism and locality in simulations
-  hw: P1 due
 #
 # ==================
 # Week 5
@@ -54,6 +53,7 @@
 -
   date: 2024-09-24
   info: Distributed memory programming
+  hw: P1 due
 -
   date: 2024-09-26
   info: Distributed memory programming
