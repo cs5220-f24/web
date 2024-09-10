@@ -3,13 +3,12 @@ title: Getting familiar with GCP
 author: David Bindel
 ---
 
-The [Google Cloud Platform](https://cloud.google.com/) is one of the
-three major cloud platforms (the others are Amazon Web Services and
-Microsoft Azure).  Thanks to their generous
-[https://edu.google.com/programs/?modal_active=none](program for
-higher education), we have some credits to use as part of our
-computing resources this semester.  In this document, we are going to
-walk through some of the basics of working with GCP.
+The [Google Cloud Platform](https://cloud.google.com/) is one of the three
+major cloud platforms (the others are Amazon Web Services and Microsoft Azure).
+Thanks to their generous [program for higher
+education](https://edu.google.com/programs/?modal_active=none) we have some
+credits to use as part of our computing resources this semester.  In this
+document, we are going to walk through some of the basics of working with GCP.
 
 ## Concepts
 
