@@ -31,6 +31,8 @@
 -
   date: 2024-09-10
   info: Basic optimizations
+  slides: 04-basic-opt
+  notes: 01-perf-basics.html
   hw: Survey due
 -
   date: 2024-09-12
