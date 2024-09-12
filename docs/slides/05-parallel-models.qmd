@@ -99,7 +99,7 @@ double dot(int n, double* x, double* y)
 ## Dot product
 
 ```{.c}
-double pdot(int in, double* x, double* y)
+double pdot(int n, double* x, double* y)
 {
     double s = 0;
 
@@ -262,7 +262,7 @@ Shared memory *correctness* is hard
 
 - Too little synchronization: races
 - Too much synchronization: deadlock
-- And both can happen at onces!
+- And both can happen at once!
 
 And this is before we talk performance!
 
@@ -392,7 +392,7 @@ Better, but what if more than two processors?
 - High-level: solve bit problems fast
 - Start with good *serial* performance
 - Given $p$ processors, could then ask for
-  - Good *sppedup*: serial time $/p$
+  - Good *speedup*: serial time $/p$
   - Good *scaled speedup*: $p \times$ serial work in serial time
 - Easiest to get speedup from bad serial code!
 
@@ -416,9 +416,9 @@ Can get more parallelism / locality through modeling
 
 ## Parallelism and locality
 
-Often get praallelism at multiple levels
+Often get parallelism at multiple levels
 
-- Hierarchical circuit simluation
+- Hierarchical circuit simulation
 - Interacting models for climate
 - Parallelizing experiments in MC or optimization
 
