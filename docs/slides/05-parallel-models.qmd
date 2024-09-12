@@ -56,7 +56,7 @@ Log-log plot showing memory/compute bottlenecks.
 
 ## One core (GCP C4, Emerald Rapids)
 
-[See source example](https://www.cs.cornell.edu/courses/cs5220/2024fa/img/roofline.html)
+[See source example](https://www.cs.cornell.edu/courses/cs5220/2024fa/data/roofline.html)
 
 ## References
 
