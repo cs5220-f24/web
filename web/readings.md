@@ -53,6 +53,11 @@ CS 267), [available here][cs267] in online form.
 
 ### Other recommendations
 
+- Argonne runs
+  [ATPESC](https://extremecomputingtraining.anl.gov/agenda-2024/)
+  every summer (Argonne Training Program on Extreme-Scale Computing).
+  This covers many things from our class (plus some others) in about
+  two weeks.
 - Alan Edelman at MIT teaches a different parallel programming course,
   with the most recent iterations based on [Julia][julia].  Materials
   are [available here on MIT OpenCourseWare][mit-ocw-julia]].
@@ -61,6 +66,8 @@ CS 267), [available here][cs267] in online form.
 - Randy Leveque at UW has also been experimenting with a flipped
   classroom for their intro HPC class, [AM583][am583].  You may also
   be interested in the [MOOC version][am583-mooc].
+- The [NERSC docs](https://docs.nersc.gov/) have lots of good
+  auxiliary references.
 
 [julia]: http://julialang.org/
 [mit-ocw-julia]: http://ocw.mit.edu/courses/mathematics/18-337j-parallel-computing-fall-2011/
@@ -70,9 +77,7 @@ CS 267), [available here][cs267] in online form.
 
 ## Related resources from Intel
 
-Intel has supported our course through a generous hardware donation.
-Part of the point is to develop new curricular content on parallel
-programming.  They also have lots of existing curricular content and
+Intel has lots of existing curricular content and
 tutorials and references on Intel parallel technology, and these
 are worth a browse.
 
@@ -164,6 +169,41 @@ Specifically, you will want to look at the lessons on the Unix shell
 and Git early on, and the lesson on Automation and Make fairly soon.
 For later in the class, you may want the lesson on Programming with
 Python.
+
+## C++ background
+
+Modern C++ is a *different language* from modern C.  It is a much
+bigger language, partly because it provides more abstractions (and
+more safe abstractions), making it a nice choice for large-scale
+software development in particular.  At the same time, the language
+design is very wedded to maintaining C levels of performance -- the
+C++ philosophy is to avoid paying extra costs for abstractions if
+possible (and particularly for abstractions that you are not using).
+
+### Main reference
+
+- For learning modern C++, [learncpp][learncpp] is a
+  good choice.  If you are a confident C programmer already, you can
+  skim past a lot.
+- For looking things up, [cppreference][cppreference] is great.
+
+[learncpp]: https://www.learncpp.com/
+[cppreference]: https://en.cppreference.com/
+
+### Other references
+
+- Stroustrop's [A Tour of C++][tourcpp] is a good overview if
+  you already are a confident programmer (and an excellent one if you
+  already know some C++ programming)
+- For the same audience, [Professional C++](gregoire)
+- The standard reference is [The C++ Programming Language][stroustrop4e]
+- If you prefer watching things, the [CppCon Back to Basics][cpp-b2b]
+  come recommended (I prefer books)
+
+[tourcpp]: https://www.stroustrup.com/tour3.html
+[gregoire]: https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193172
+[stroustop4e]: https://www.stroustrup.com/4th.html
+[cpp-b2b]: https://www.youtube.com/user/CppCon/search?query=back%20to%20basics
 
 ## Python background
 
