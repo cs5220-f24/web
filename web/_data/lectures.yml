@@ -45,7 +45,7 @@
 -
   date: 2024-09-17
   info: Parallelism and locality in simulations
-  hw: HW1 due
+  slides: 06-simulation1
 -
   date: 2024-09-19
   info: Parallelism and locality in simulations
@@ -60,7 +60,7 @@
 -
   date: 2024-09-26
   info: Distributed memory programming
-  hw: HW2 due
+  hw: HW1 due
 #
 # ==================
 # Week 6
@@ -72,7 +72,7 @@
 -
   date: 2024-10-03
   info: Shared memory programming
-  hw: HW3 due
+  hw: HW2 due
 #
 # ==================
 # Week 7
