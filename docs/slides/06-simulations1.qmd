@@ -118,7 +118,7 @@ Sketch of a kernel for tiled implementation:
 
 Some areas are more eventful than others!
 
-![](https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif){width="40%" fig-align="center"}
+![](../img/Gospers_glider_gun0.png){width="40%" fig-align="center"}
 
 ## Game of Life
 
