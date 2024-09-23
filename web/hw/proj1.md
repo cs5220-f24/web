@@ -3,7 +3,7 @@ title: Matrix multiply project
 layout: main
 ---
 
-Due 2024-09-24.
+Due 2024-10-01.
 
 ## Matrix multiply code base
 
