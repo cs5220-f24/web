@@ -57,11 +57,9 @@
 -
   date: 2024-09-24
   info: Distributed memory programming
-  hw: P1 due
 -
   date: 2024-09-26
   info: Distributed memory programming
-  hw: HW1 due
 #
 # ==================
 # Week 6
@@ -69,7 +67,7 @@
 -
   date: 2024-10-01
   info: Shared memory programming
-  hw: P2 out
+  hw: P1 due, P2 out, HW1 due
 -
   date: 2024-10-03
   info: Shared memory programming
