@@ -76,5 +76,5 @@ the login nodes.
 You have two tasks:
 
 - Run the MPI ping-pong example from the demos subdirectory and submit
-  your timings from on Perlmutter.  
+  your timings from on Perlmutter.
 - Complete the [`telephone` code](https://github.com/cs5220-f24/hw1).
