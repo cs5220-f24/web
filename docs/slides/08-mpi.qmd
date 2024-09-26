@@ -2,7 +2,7 @@
 title: CS 5220
 subtitle: Distributed memory
 author: David Bindel
-date: 2024-09-23
+date: 2024-09-24
 format:
   revealjs:
     theme: default
