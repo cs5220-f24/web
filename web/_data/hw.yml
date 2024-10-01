@@ -10,3 +10,11 @@
   desc: "HW1: Hello, Perlmutter"
   file: hw1.html
   due: 2024-10-01
+-
+  desc: "HW2: Compile OpenMP"
+  file: hw2.html
+  due: 2024-10-08
+- 
+  desc: "Smoothed Particle Hydrodynamics"
+  file: proj2.html
+  due: 2024-10-17
