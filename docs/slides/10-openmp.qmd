@@ -245,27 +245,29 @@ Processes have *separate state*. Threads share *some*:
     -   Preprocessor/compiler directives (80%)
     -   Library calls (19%)
     -   Environment variables (1%)
--   Basic syntax: `\#omp *construct* \[*clause* \...\]`
+-   Basic syntax: `#omp` *construct* `[` *clause* ... `]`
     -   Usually affects structured block (one way in/out)
     -   OK to have `exit()` in such a block
 
 ## A logistical note
 
-    # Intel compiler
-    icc -c -qopenmp foo.c
-    icc -o -qopenmp mycode.x foo.o
+```{.sh}
+# Intel compiler
+icc -c -qopenmp foo.c
+icc -o -qopenmp mycode.x foo.o
 
-    # GCC
-    gcc -c -fopenmp foo.c
-    gcc -o -fopenmp mycode.x foo.o
+# GCC
+gcc -c -fopenmp foo.c
+gcc -o -fopenmp mycode.x foo.o
 
-    # LLVM / CLang (Linux)
-    clang -c -fopenmp foo.c
-    clang -o -fopenmp mycode.x foo.o
+# LLVM / CLang (Linux)
+clang -c -fopenmp foo.c
+clang -o -fopenmp mycode.x foo.o
 
-    # Apple LLVM / CLang (with libomp via Homebrew)
-    clang -c -Xpreprocessor -fopenmp foo.c
-    clang -o -Xpreprocessor -fopenmp foo.o -lomp
+# Apple LLVM / CLang (with libomp via Homebrew)
+clang -c -Xpreprocessor -fopenmp foo.c
+clang -o -Xpreprocessor -fopenmp foo.o -lomp
+```
 
 ## Parallel "hello world"
 
