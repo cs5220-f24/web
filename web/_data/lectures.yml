@@ -69,11 +69,11 @@
 -
   date: 2024-10-01
   info: Shared memory programming
-  hw: P1 due, P2 out, HW1 due
+  hw: P1 due, P2 out, HW1 due, HW2 out
+  slides: 10-openmp
 -
   date: 2024-10-03
   info: Shared memory programming
-  hw: HW2 due
 #
 # ==================
 # Week 7
@@ -81,7 +81,7 @@
 -
   date: 2024-10-08
   info: Heterogeneity and accelerators
-  hw: HW4
+  hw: HW2 due
 -
   date: 2024-10-10
   info: Heterogeneity and accelerators
