@@ -453,7 +453,7 @@ void gpu_add(int n, float* x, float* y)
 }
 
 // Call looks like
-gpu_add<<<ceil(n/BLOCKSIZE),BLOCKSIZE>>>(n, x, y);
+gpu_add<<<n_blocks,block_size>>>(n, x, y);
 ```
 
 - Each thread handles one entry
