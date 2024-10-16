@@ -98,8 +98,6 @@
   date: 2024-10-17
   info: Guest lecture (Guidi)
   travel: Simons MPS
-  hw: P3 out
-  hw: P2 due
 #
 # ==================
 # Week 9
@@ -107,6 +105,7 @@
 -
   date: 2024-10-22
   info: Dense linear algebra
+  hw: P2 due
 -
   date: 2024-10-24
   info: Dense linear algebra
