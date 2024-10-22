@@ -17,4 +17,8 @@
 - 
   desc: "Smoothed Particle Hydrodynamics"
   file: proj2.html
-  due: 2024-10-17
+  due: 2024-10-24
+-
+  desc: "HW3: Hello, CUDA"
+  file: hw3.html
+  due: 2024-10-29

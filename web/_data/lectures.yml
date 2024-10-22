@@ -87,6 +87,7 @@
 -
   date: 2024-10-10
   info: Heterogeneity and accelerators
+  slides: 13-gpu
 #
 # ==================
 # Week 8
@@ -98,8 +99,6 @@
   date: 2024-10-17
   info: Guest lecture (Guidi)
   travel: Simons MPS
-  hw: P3 out
-  hw: P2 due
 #
 # ==================
 # Week 9
@@ -107,10 +106,13 @@
 -
   date: 2024-10-22
   info: Dense linear algebra
+  slides: 14-densela
+  hw: P3 out
 -
   date: 2024-10-24
   info: Dense linear algebra
-  hw: Final proposal
+  slides: 14-densela
+  hw: P2 due
 #
 # ==================
 # Week 10
@@ -118,9 +120,11 @@
 -
   date: 2024-10-29
   info: Sparse linear algebra
+  hw: HW3 due
 -
   date: 2024-10-31
   info: Sparse linear algebra
+  hw: Final proposal
 #
 # ==================
 # Week 11
