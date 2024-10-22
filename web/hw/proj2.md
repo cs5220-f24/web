@@ -3,7 +3,7 @@ title: Smoothed Particle Hydrodynamics
 layout: main
 ---
 
-Due 2024-10-17.
+Due 2024-10-22.
 
 ![Picture of simulation](simulation_output.png) 
 
