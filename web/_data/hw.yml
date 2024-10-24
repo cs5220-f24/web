@@ -22,3 +22,7 @@
   desc: "HW3: Hello, CUDA"
   file: hw3.html
   due: 2024-10-29
+-
+  desc: "Shallow Water Equations"
+  file: proj3.html
+  due: 2024-7-14
