@@ -134,39 +134,41 @@
 -
   date: 2024-11-05
   info: Graph partitioning
+  slides: 18-partition
 -
   date: 2024-11-07
   info: Load balancing
-  hw: P3 due
+  slides: 19-balance
 #
 # ==================
 # Week 12
 #
 -
   date: 2024-11-12
-  info: Asynchronous methods
-  hw: Final check-in
+  info: Guest lecture (Damle)
+  travel: FMITF
 -
   date: 2024-11-14
   info: Guest lecture (Damle)
   travel: Emory
+  hw: P3 due
 #
 # ==================
 # Week 13
 #
 -
   date: 2024-11-19
-  info: Parallel graph algorithms
+  info: The impact of floating point
 -
   date: 2024-11-21
-  info: The impact of floating point
+  info: Parallel graph algorithms
 #
 # ==================
 # Week 14
 #
 -
   date: 2024-11-26
-  info: Mixing languages, libraries, and frameworks
+  info: Asynchronous iterations
   hw: Final outline
 -
   date: 2024-11-28
