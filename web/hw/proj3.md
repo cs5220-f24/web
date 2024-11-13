@@ -112,9 +112,15 @@ In the spirit of previous iterations of this project, we use periodic boundary c
 In other words, when simulating our grid, the last row / column should behave as if it were adjacent to the first row / column. Symbolically, we represent these conditions as
 
 $$
+<<<<<<< Updated upstream
 \begin{aligned}
 u_{0, y_i} = u_{x_{n_x + 1}, y_i}^t \quad \text { and } \quad y_{x_i, 0}^t = y_{x_i, y_{n_y + 1}}^t
 \end{aligned}
+=======
+\begin{align*}
+u_{0, y_i} = u_{x_{n_x + 1}, y_i}^t \quad \text { and } \quad v_{x_i, 0}^t = v_{x_i, y_{n_y + 1}}^t
+\end{align*}
+>>>>>>> Stashed changes
 $$
 
 ### Ghost Cells
@@ -169,26 +175,27 @@ To actually run your code, you will need to allocate a GPU node on pearlmutter. 
 
 The next parallelization task you have is to use MPI to perform this computation on multiple separate computers (and potentially multiple local threads on each computer). The skeleton file for this task is located in `mpi/mpi.cpp`. Similar to the CUDA task, we don't allocate memory on all nodes for our initial $h$, $u$ and $v$ grids, and only do this for the node with rank 0. Therefore, in your init function you need to transfer the corresponding sections of your grids to each processor (hint, the `MPI_Scatterv` function might be very helpful for this). You will also need to gather all of the different pieces of the grid in the `transfer` and put them back on the node with rank 0 (hint, `MPI_Gatherv` is useful for this).
 
-To run your MPI application, you can see [this](https://docs.nersc.gov/development/programming-models/mpi/cray-mpich/) article on NERSC, or TLDR use `salloc --nodes N --qos interactive --time 01:00:00 --constraint gpu --gpus 1 --account mxxxx`, where you fill in `N` with the number of nodes you want to use. Then, to run your application, you can follow the guide, or again TLDR use `srun -N N -n n ./mpi`, where `N` is the number of nodes you want to use and `n` is the number of threads you want per node.
+To run your MPI application, you can see [this](https://docs.nersc.gov/development/programming-models/mpi/cray-mpich/) article on NERSC, or TLDR use `salloc --nodes=N --ntasks-per-node=n --qos interactive --time 01:00:00 --constraint cpu --account mxxxx`, where you fill in `N` with the number of nodes you want to use and `n` with the number of tasks per node. Then, to run your application, you can follow the guide, or again TLDR use `srun --nodes=N --ntasks-per-node=n ./mpi`.
 
 ### Utilities
 
-In order to visualize and check the correctness of your implementations, we have created some helper scripts. The first, `utils/visualizer.py`, takes in the name of a file produced by your script, and creates an animated GIF file from it (you can choose the name of this file as your other argument). The other utility script, `utils/correctness.py`, takes in the names of two output files, prints out the maximum error between them over the $h$ grid at all timesteps, and also outputs a GIF file showing (1) the maximum error plotted over time, and (2) a plot of where the error is accumulating over your grid over time.
+In order to visualize and check the correctness of your implementations, we have created some helper scripts. The first, `utils/visualizer.py`, takes in the name of a file produced by your script, and creates an animated GIF file from it (you can choose the name of this file as your other argument). The second utility script, `utils/correctness.py`, takes in the names of two output files, prints out the maximum error between them over the $h$ grid at all timesteps, and also outputs a GIF file showing (1) the maximum error plotted over time, and (2) a plot of where the error is accumulating over your grid over time. The third utility script, `utils/timing.py`, takes in either `serial`, `gpu`, `mpi_weak`, `mpi_strong` as first argument and the name of the corresponding executable as its second argument, and then generates the plots you'll need for the submission.
 
 ### Submission
 
 Again, please work on this project in groups of 2-5, as otherwise grading is a real hassle (there are 2 TAs for the whole class). You should try to have one non-CS person per group if you can, so that you have a wide range of perspectives. This will be particularly helpful trying to understand the math or any domain specific knowledge. You do not need to have the same groups as last time.
 
 Once you are done, you will submit your code to CMS, along with a report. This report should include:
-- Proof that your serial implementation works as intended (i.e. that it does not deviate from the output of `basic_serial` by more than around $10^{-14}$)
-- A plot of $n$ versus the time taken for your serial code (where $n$ is the number of cells in the $x$ and $y$ direction) for 10,000 iterations and up to $n = 1,000$
-- A description of the optimizations you tried for your serial code, as well as a timing breakdown of where your program spends the most cycles
-- Proof that your CUDA implementation works as intended
-- A plot of $n$ versus the time taken for your CUDA code (where $n$ is the number of cells in the $x$ and $y$ direction) for 10,000 iterations and up to $n = 100,000$
-- A description of the optimizations you tried for your CUDA code, as well as a timing breakdown of where your program spends the most cycles
-- Proof that your MPI implementation works as intended (the error can be much looser here)
-- Two parallel speed-up plots, one where you fix $n = 10,000$ for 10,000 iterations on 2 nodes and scale up the number of nodes / threads from there, and another where you start with $n = 1,000$ on a single node, then double the number of particles and nodes up to $n = 16, 000$
-- A description of the optimizations you tried for your MPI code, as well as a timing breakdown of where your program spends the most cycles
+- Proof that your serial implementation works as intended (i.e. that it does not deviate from the output of `basic_serial` by more than around $10^{-14}$). To do this, use the `correctness.py` utility to compare your output with the `basic_serial` code at $n_x = n_y = 1,000$ and 1,000 iterations. For example, if you're basic output was `basic.out` and your serial output was `serial.out`, you would run `./correctness.py ../build/basic.out ../build/serial.out` from the `utils` directory.
+- A plot of $n$ versus the time taken for your serial code (where $n$ is the number of cells in the $x$ and $y$ direction) for 10,000 iterations and up to $n = 1,000$. To do this, use the `timing.py` utility, and pass in `serial` as the timing option and then the name of your executable. For example, you would run `./timing.py serial ../build/serial` from the `utils` folder, and then upload the generated graph, which should be named `serial_timing.ping`.
+- A description of the optimizations you tried for your serial code, as well as a timing breakdown of where your program spends the most cycles. To do this, use a profiler of your choice to show how much time your code spends in each function and explain why. This should go in your report.
+- Proof that your CUDA implementation works as intended, again using the `correctness.py` utility script with $n_x = n_y = 1,000$ and 1,000 iterations.
+- A plot of $n$ versus the time taken for your CUDA code (where $n$ is the number of cells in the $x$ and $y$ direction) for 10,000 iterations and up to $n = 10,000$. To do this, use the `timing.py` file with `gpu` as the timing type.
+- A description of the optimizations you tried for your CUDA code, as well as a timing breakdown of where your program spends the most cycles. Again, use a profiler of your choice (probably `ncu`) to see which kernels are taking the longest and an explanation of why. This should go in your report.
+- Proof that your MPI implementation works as intended (the error can be much looser here, i.e. on the order of 0.1). To do this, again use the `correctness.py` utility script with $n_x = n_y = 1,000$, 1,000 iterations, and let's say 4 nodes with 32 tasks per node (honestly, this is up to you with the number of ranks, as long as its more than 1).
+- Two parallel speed-up plots, one where you fix $n = 2,048$ for 10,000 iterations on 8, 32, 128, and 512 nodes, and another where you start with $n = 512$ on 8 ranks, and then do $n = 1,024$ on 32 ranks, $n = 2,048$ on 128 ranks, and $n = 4,096$ on 512 ranks. To do this, use the `timing.py` script with `mpi_strong` and `mpi_weak` as the timing options.
+- A description of the optimizations you tried for your MPI code, as well as a timing breakdown of where your program spends the most cycles. To do this, profile your code using either explicit timing or a profiler (the Pearlmutter page lists some), and then document where your code spends its time and explain why. Also, breakdown this time into communication and computation and explain why, and show how this changes as you increase the number of particles and the number of ranks.
+- An animation for each method with $n_x = n_y = 1,000$ for 1000 iterations, generated by the `visualizer.py` utility script.
 
 ### Resources
 
