@@ -159,6 +159,7 @@
 -
   date: 2024-11-19
   info: The impact of floating point
+  slides: 20-fp
 -
   date: 2024-11-21
   info: Parallel graph algorithms
