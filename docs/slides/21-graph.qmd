@@ -11,6 +11,56 @@ format:
     slide-level: 2
 ---
 
+# Logistics
+
+## Remaining meetings
+
+- Nov 26: Async iterations / final outline
+- Dec 3 and 5: Project presentations
+
+## Course eval
+
+- Open Dec 2-12
+- Completion counts toward participation
+
+## Final deadline
+
+Midnight on 12/19 (must be after 4:30 PM per university)
+
+## Final outline
+
+- Think "outline of my paper"
+- Should include
+  - Basics of what you want to do
+  - Evaluation setup (workload, etc)
+  - Planned (or finished) performance experiments
+  - Possibly a timeline
+- Can represent reconfigured group
+
+## Project presentations
+
+- Logistics
+  - Think 3-5 minutes
+  - Not everyone needs to talk!
+  - Slides via Zoom share
+- Contents
+  - What you want to do / have done
+  - Evaluation and performance plans
+    - Does not have to be finished!
+
+## Notes
+
+- Care most about *final report*
+  - I don't want to stare at your code!
+- Outline/presentation help me give feedback
+- Emphasis is *performance analysis and tuning*
+  - Think about benchmarks and baselines
+  - Think about strong/weak scaling experiments
+  - ... and check for correctness as well
+- Get something done, fine to speculate on next steps
+
+# Lecture
+
 ## Plan
 
 - Some background on graphs
